@@ -44,14 +44,6 @@ Welcome to the **Pet Grooming Booking Web App** – a full-stack platform built 
 
 ---
 
-## 📷 Screenshots
-
-| User Booking Page | Admin Dashboard |
-|-------------------|-----------------|
-| ![Booking](public/screenshots/booking.png) | ![Admin](public/screenshots/admin.png) |
-
----
-
 ## 🧪 How to Run Locally
 
 ### 1. Clone the repository
@@ -59,3 +51,60 @@ Welcome to the **Pet Grooming Booking Web App** – a full-stack platform built 
 ```bash
 git clone https://github.com/yourusername/pet-grooming-app.git
 cd pet-grooming-app
+
+```
+### 2. Set up the backend
+
+```bash
+cd server
+npm install
+
+```
+### 🔐 .env Setup (Backend)
+
+Create a `.env` file inside your `server` folder and add the following:
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=grooming
+JWT_SECRET=yourSecretKey
+HOST=localhost
+PORT=3001
+```
+###  Start the backend:
+
+```bash
+npm start
+
+```
+### 3. Set up the frontend
+
+```bash
+cd ../client
+npm install
+npm start
+```
+## 🤝 Contributing
+
+Have a cool idea or improvement?  
+Feel free to **fork the repo**, make changes, and **submit a pull request**.  
+**Contributions are always welcome!**
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🙋‍♂️ Developed By
+
+**Pranav Bansode**  
+💼 Full Stack Developer  
+📫 [pranavbansode8421@gmail.com](mailto:pranavbansode8421@gmail.com)  
+
+
+```
