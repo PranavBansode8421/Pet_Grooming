@@ -1,0 +1,49 @@
+.contactus-wrapper {
+  background-color: #fff9e5;
+  height: 100%;
+}
+.contact-form-wrapper {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.btn-send {
+  background-color: #fdc565 !important;
+}
+.btn-send:hover {
+  background-color: #feb941 !important;
+}
+.contactus-subhead {
+  font-family: Satoshi, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34.84px;
+  color: rgb(63, 46, 31);
+}
+.contact-icon-wrapper {
+    background-color: #FDCB6E;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+.contact-text {
+    font-family: Satoshi, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    
+}
+.contact-subtext {
+  font-family: Satoshi, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.socialmedia-wrapper{
+    width: 40%;
+}
+.socialmedia-wrapper img{
+    width: 30px;
+}
+.all-wrap {
+    background-color: white;
+}

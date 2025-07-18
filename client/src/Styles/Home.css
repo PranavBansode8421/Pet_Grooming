@@ -1,0 +1,156 @@
+/* index.css or fonts.css */
+@font-face {
+  font-family: "Fredoka2"; /* Choose a name for your font */
+  src: url("../fonts/Fredoka/static/Fredoka-Medium.ttf") format("truetype"); /* Adjust path and format */
+  /* Add more src lines for different font formats (woff, woff2) for wider browser compatibility */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fredoka1"; /* Choose a name for your font */
+  src: url("../fonts/Fredoka/static/Fredoka-Light.ttf") format("truetype"); /* Adjust path and format */
+  /* Add more src lines for different font formats (woff, woff2) for wider browser compatibility */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home-title {
+  font-family: Fredoka2, sans-serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 87.32px;
+  color: rgb(63, 46, 31);
+}
+.home-description {
+  font-family: Fredoka1, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 34.84px;
+  color: rgb(63, 46, 31);
+}
+.btn-bookappointment {
+  background-color: hsl(39, 97%, 71%) !important;
+  color: #3f2e1f !important;
+  font-family: Satoshi, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+ 
+}
+.btn-bookappointment:hover {
+  background-color: rgb(250, 166, 10) !important;
+  color: #36270a !important;
+  font-family: Satoshi, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+  
+}
+.home-dog-bg-img {
+ 
+  width: 100%;
+}
+.home-bg {
+  background-color: #fff9e5 !important;
+  
+}
+.home-aboutus h3 {
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(63, 46, 31);
+}
+.home-aboutus {
+  background-color: #fffbf1;
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+.home-aboutus h2 {
+  font-family: Fredoka2, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 63.44px;
+  color: rgb(63, 46, 31);
+}
+.home-aboutus p {
+  font-family: Satoshi, sans-serif;
+font-size: 22px;
+font-weight: 500;
+line-height: 28.6px;
+color: rgb(63, 46, 31);
+
+}
+.btn-aboutus {
+  background-color: #fdcb6e !important;
+  color: #3f2e1f !important;
+  font-family: Satoshi, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+ 
+}
+.btn-aboutus:hover {
+  background-color: rgb(250, 166, 10) !important;
+  color: #36270a !important;
+  font-family: Satoshi, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+  
+}
+.img-wrapper {
+  border-radius: 35px;
+  width: 100%;
+  padding: 10px;
+  height:100%;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(300px * 5); /* number of images * 2 */
+  animation: slide-alternate 20s linear infinite alternate;
+  
+}
+
+.slide-img {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.slide-img:hover {
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes slide-alternate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-295px * 3)); /* total width of 3 images if each is 300px */
+  }
+}
+.desc-person p{
+  opacity: 0;
+  font-family: Fredoka1, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 15px;
+  color: rgb(63, 46, 31);
+}
+.desc-person:hover p{
+  opacity: 1;
+  
+  
+  transition: all 0.5s ease-in-out;
+}
+.Nav {
+  text-decoration: none;
+  color:#3F2E1F;
+}

@@ -1,0 +1,49 @@
+.services-heading {
+  font-family: Fredoka2, sans-serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 87.32px;
+  color: rgb(63, 46, 31);
+}
+.service-wrapper {
+  background-color: #FAF6EC;
+}
+.icon-wrapper {
+  
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 88px;
+  display: flex;
+}
+.service-card-wrapper {
+  background-color: white;
+  border-radius: 15px;
+}
+.service-card-wrapper:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+.services-card-title {
+  font-family: Fredoka2, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(63, 46, 31);
+}
+.services-card-description {
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}
+.service-card-readmore {
+    font-family: Satoshi, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}

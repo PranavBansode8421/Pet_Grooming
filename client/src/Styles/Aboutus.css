@@ -1,0 +1,114 @@
+.aboutus-heading {
+  font-family: Fredoka2, sans-serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 87.32px;
+  color: rgb(63, 46, 31);
+  padding: 0px 9rem;
+}
+
+@media screen and (max-width: 991px) {
+  .aboutus-heading {
+    font-size: 64px;
+    line-height: 115%;
+    padding: 0px 0px;
+  }
+}
+.aboutus-container {
+  background-color: #fff9e5 !important;
+}
+.aboutus-subheading {
+  font-family: Satoshi, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34.84px;
+  color: rgb(63, 46, 31);
+}
+.image-about-hero1 {
+  place-self: center stretch;
+  border-radius: 25px;
+  vertical-align: middle;
+  max-width: 100%;
+
+  display: flex;
+}
+.no-controls-video {
+  width: 100%;
+  height: 600px;
+  pointer-events: none; /* Prevent mouse interaction (no pause/play on click) */
+  object-fit: cover;
+  display: flex;
+}
+.stat-about {
+  font-family: Satoshi, sans-serif;
+  font-size: 90px;
+  font-weight: 500;
+  line-height: 99px;
+  color: rgb(63, 46, 31);
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url(../fonts/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf);
+}
+.stat-head-about {
+  font-family: Satoshi, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.2px;
+  color: rgb(63, 46, 31);
+}
+.stat-subhead-about {
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgba(15, 26, 35, 0.8);
+}
+.our-story-wrapper {
+    background-color: #FFFBF1 !important;
+}
+.ourstory {
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(63, 46, 31);
+}
+.ourstory-head {
+  font-family: Fredoka2, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 63.44px;
+  color: rgb(63, 46, 31);
+}
+.ourstory-subhead {
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}
+.quotewrapper {
+  background-color: #fdcb6e !important;
+  border-radius: 12px;
+  height: 200px;
+}
+.quotewrapper p {
+  font-family: Fredoka2, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 33.8px;
+  color: rgb(63, 46, 31);
+  padding: 55px;
+}
+
+.co-founder {
+    font-family: Fredoka1, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(63, 46, 31);
+}
+.subaboutus-wrapper{
+    background-color: #FFF9E5;
+}

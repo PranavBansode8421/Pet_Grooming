@@ -1,0 +1,77 @@
+.pricing-wrapper {
+  background-color: #fffbf1;
+}
+.pricing-heading {
+  font-family: Fredoka2, sans-serif;
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 87.32px;
+  color: rgb(63, 46, 31);
+}
+.pricing-subheading {
+  font-family: Satoshi, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34.84px;
+  color: rgb(63, 46, 31);
+}
+.pricing-card-wrapper {
+  background-color: white;
+  border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.price-tag {
+  background-color: #a6c1e7;
+  text-align: center;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  display: flex;
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  
+}
+.price-plan {
+  font-family: Fredoka2, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(63, 46, 31);
+}
+.price-plan-desc {
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}
+.service-name {
+  font-family: Satoshi, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}
+.icon-check-pricing {
+  width: 24px;
+  height: 24px;
+}
+.get-started {
+    border-radius: 10px;
+ font-family: Satoshi, sans-serif;
+font-size: 18px;
+font-weight: 500;
+line-height: 23.4px;
+
+}
+.get-started:active {
+    
+    box-shadow: rgba(105, 105, 105, 0.15) 0px 4px 12px;
+}

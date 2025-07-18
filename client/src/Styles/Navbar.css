@@ -1,0 +1,35 @@
+div li .nav-link {
+  color: #3f2e1f !important;
+}
+div .cart {
+  background-color: hsl(39, 97%, 71%) !important;
+  color: #3f2e1f !important;
+
+  /* font-size: 20px; */
+  margin-right: 30px;
+}
+div .cart:hover {
+  background-color: rgb(250, 166, 10) !important;
+  color: #36270a !important;
+  /* font-size: 20px; */
+}
+#navbarNav {
+  
+  justify-content: space-between;
+}
+#navbarNav.show {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  
+  background-color: #fff9e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.text-capitalize {
+  text-transform: capitalize;
+}

@@ -1,0 +1,88 @@
+/* Wrapper Background */
+.FAQ-wrapper {
+  background-color: #fffbf1;
+  padding: 2rem 0;
+}
+
+/* Section Label */
+.faq {
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(63, 46, 31);
+  margin-bottom: 1rem;
+}
+
+/* Section Title */
+.faq-title {
+  font-family: Fredoka2, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 63.44px;
+  color: rgb(63, 46, 31);
+  margin-bottom: 2rem;
+}
+
+/* Accordion Item */
+.custom-faq {
+  border: 1.5px solid #fffbf1; /* ✅ soft border */
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+/* Accordion Header Button */
+.accordion-button {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 1rem 1.25rem;
+}
+
+/* Remove background and shadow on open */
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Closed State (ensure clean white background) */
+.accordion-button.collapsed {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: none !important; /* ✅ Remove shadow on close */
+}
+/* Accordion Body */
+.accordion-body {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  padding: 1rem 1.25rem;
+  line-height: 1.6;
+  border-radius: 0 0 25px 25px;
+}
+
+/* Smooth transition */
+.accordion-collapse {
+  transition: all 0.3s ease-in-out;
+}
+.accordion-button {
+  font-family: Satoshi, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 21.6px !important;
+  color: rgb(63, 46, 31) !important;
+}
+.accordion-body {
+  font-family: Satoshi, sans-serif !important;
+
+  font-weight: 500 !important;
+  line-height: 21.6px !important;
+  color: rgb(63, 46, 31) !important;
+  font-size: 16px !important;
+}

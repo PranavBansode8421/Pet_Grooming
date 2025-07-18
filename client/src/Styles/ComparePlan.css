@@ -1,0 +1,54 @@
+.compareplan-heading {
+  font-family: Fredoka2, sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 63.44px;
+  color: rgb(63, 46, 31);
+}
+.compareplan-wrapper {
+  background-color: #fff9e5;
+}
+.comparison-card-wrapper {
+  background-color: white;
+  border-radius: 20px;
+}
+.get-started-wrapper-sm {
+  border-radius: 10px;
+  width: 150px;
+  border-radius: 10px;
+  font-family: Satoshi, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 23.4px;
+}
+.compare-heading {
+  font-family: Fredoka2, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(63, 46, 31);
+}
+.compare-charges {
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  color: rgb(63, 46, 31);
+}
+.compare-service-heading {
+  font-family: Satoshi, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(63, 46, 31);
+}
+.compare-services-subheading p {
+  font-family: Satoshi, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.4px;
+  color: rgb(63, 46, 31);
+}
+.check-icon-wrapper {
+  padding-top:40px ;
+}
