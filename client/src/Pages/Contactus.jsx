@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../Styles/Faq.css";
 import "../Styles/Contactus.css";
-
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const Contactus = () => {
   const [contactData, setContactData] = useState({
     name: "",
@@ -24,7 +24,7 @@ const Contactus = () => {
     
       e.preventDefault();
 
-      axios.post("http://localhost:3001/contactus", contactData)
+      axios.post(`${API_BASE}/contactus`, contactData)
       .then((res)=>{
         console.log(res);
         alert(res.data);

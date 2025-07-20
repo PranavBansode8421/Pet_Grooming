@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const Myappointments = () => {
   const [data, setData] = useState([]);
 
@@ -9,7 +9,7 @@ const Myappointments = () => {
 
   const FetchData = async () => {
     try {
-      const result = await axios.get("http://127.0.0.1:3001/appointments");
+      const result = await axios.get(`${API_BASE}/appointments`);
       const allAppointments = result.data;
 
       
@@ -32,7 +32,7 @@ const Myappointments = () => {
     try {
       const result = data.filter((val) => val.id !== id);
       setData(result);
-      await axios.delete("http://127.0.0.1:3001/appointments/" + id);
+      await axios.delete(`${API_BASE}/appointments/${id}`);
       alert("Data Deleted Successfully with ID : " + id);
     } catch (err) {
       console.log("Error Occured : " + err);

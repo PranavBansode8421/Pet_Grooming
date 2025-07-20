@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "../Styles/BookingForm.css";
 import { useState } from "react";
 import axios from "axios";
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const BookingForm = () => {
   //1st step of form validation is define the state of form data
   const [data, setData] = useState({
@@ -62,7 +63,7 @@ const BookingForm = () => {
     console.log(data);
 
     await axios
-      .post("http://127.0.0.1:3001/appointments", data)
+      .post(`${API_BASE}/appointments`, data)
       .then((res) => {
         alert("Form Submitted ");
 

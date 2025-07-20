@@ -3,7 +3,7 @@ import "../Styles/BookingForm.css";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const Update = () => {
   //1st step of form validation is define the state of form data
   const [data, setData] = useState({
@@ -30,7 +30,7 @@ const Update = () => {
     const fetchAppointment = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:3001/appointments/${appointmentId}`
+         `${API_BASE}/appointments/${appointmentId}`
         );
         const appointment = response.data;
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import "../Styles/Signup.css";
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const Signup = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,7 +20,7 @@ const Signup = () => {
   const handleSignup = async(e) => {
     e.preventDefault();
     try{
-        const res = await axios.post("http://localhost:3001/api/auth/signup",formData);
+        const res = await axios.post(`${API_BASE}/api/auth/signup`,formData);
         alert(res.data.message)
         navigate("/login")
     }catch (err){

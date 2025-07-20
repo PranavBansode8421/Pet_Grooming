@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-
+const API_BASE = process.env.REACT_APP_BASE_URL;
 const Admin = () => {
   const [data, setData] = useState([]);
 
@@ -21,7 +21,7 @@ const Admin = () => {
       // console.log(data.filter((val) => val.id === id)[0]);
       const changeItem = updatedData.filter((val) => val.id === id)[0];
       console.log(changeItem);
-      await axios.put("http://127.0.0.1:3001/appointments/"+ id, changeItem);
+      await axios.put(`${API_BASE}/appointments/${id}`, changeItem);
       // console.log("Status Updated Successfully for ID : " + id + " to " + updatedData.filter((val) => val.id === id)[0].status);
       
       setData(()=>updatedData);
@@ -35,7 +35,7 @@ const Admin = () => {
 
   //API Calling
   const FetchData = async () => {
-    const result = await axios.get("http://127.0.0.1:3001/appointments");
+    const result = await axios.get(`${API_BASE}/appointments`);
    
     // setstate to data
     setData(result.data);
@@ -49,7 +49,7 @@ const Admin = () => {
     try {
       const result = data.filter((val) => val.id !== id);
       setData(result);
-      await axios.delete("http://127.0.0.1:3001/appointments/" + id);
+      await axios.delete(`${API_BASE}/appointments/${id}`);
       alert("Data Deleted Successfully with ID : " + id);
     } catch (err) {
       console.log("Error Occured : " + err);

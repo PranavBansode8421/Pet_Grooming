@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
+const API_BASE = process.env.REACT_APP_BASE_URL ; // "http://127.0.0.1:3001"
+
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: "",
@@ -17,7 +19,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3001/api/auth/login", credentials);
+      const res = await axios.post(`${API_BASE}/api/auth/login`, credentials);
       const { token, role,name,email,id } = res.data; //
       // console.log(role)//
       // console.log(res)
