@@ -2,18 +2,32 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
+const allowedOrigins = [
+
+  "http://localhost:3000", //local url
+  ""    // deployed frontend url
+]
 const authRoutes = require("./routes/auth"); // Import and use auth routes
 require("dotenv").config();
+
+
+
+
 //Middlewares
 app.use(express.json()); // Parse JSON bodies
 app.use(express.static("public")); // Serve static files from the 'public' directory
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({
+  origin: "*", //this is temporary it allows all urls but when we deploy frontend use allowedOrigins
+
+  credentials:true
+})); // Enable CORS for all routes
 app.use("/api/auth", authRoutes); //
 
 const db = require("./config/connection"); // Import the database connection
 
 const PORT = process.env.PORT || 3001;
-const HOST = process.env.HOST;
+
 
 app.get("/", (req, res) => {
   res.send("this is backend server");
@@ -146,6 +160,6 @@ app.post("/contactus", (req, res) => {
 
 
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server is running on http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on ${PORT}`);
 });
