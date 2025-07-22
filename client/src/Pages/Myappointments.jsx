@@ -24,10 +24,10 @@ const Myappointments = () => {
       console.error("Error fetching appointments:", err);
     }
   };
-
-  useEffect(() => {
-    FetchData();
-  }, [FetchData]);
+// eslint-disable-next-line 
+ useEffect(() => {
+  FetchData();
+}, []);
   const deleteData = async (id) => {
     try {
       const result = data.filter((val) => val.id !== id);
