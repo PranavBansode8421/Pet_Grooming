@@ -11,7 +11,10 @@ const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
 // -------- SIGNUP ROUTE ------------
 router.post("/signup", async (req, res) => {
   const { name, email, password, role } = req.body;
-
+// console.log(name)
+// console.log(email)
+// console.log(password)
+// console.log(role)
   if (!name || !email || !password || !role) {
     return res.status(400).json({ error: "All fields are required." });
   }

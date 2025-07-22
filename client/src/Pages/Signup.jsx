@@ -20,6 +20,7 @@ const Signup = () => {
   const handleSignup = async(e) => {
     e.preventDefault();
     try{
+      console.log(`${API_BASE}/api/auth/signup`)
         const res = await axios.post(`${API_BASE}/api/auth/signup`,formData);
         alert(res.data.message)
         navigate("/login")
@@ -34,7 +35,7 @@ const Signup = () => {
         <div className="col-md-6 ">
           <div className=" signup   p-5">
             <h2 className="mb-4 text-center">Signup</h2>
-
+            
             <form
               onSubmit={handleSignup}
               className="d-flex flex-column justify-content-center  align-items-center"
