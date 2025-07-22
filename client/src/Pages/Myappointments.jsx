@@ -27,7 +27,7 @@ const Myappointments = () => {
 
   useEffect(() => {
     FetchData();
-  }, []);
+  }, [FetchData]);
   const deleteData = async (id) => {
     try {
       const result = data.filter((val) => val.id !== id);
