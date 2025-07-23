@@ -54,7 +54,7 @@ const Services = () => {
   return (
     <>
       <div className="service-wrapper py-2">
-        <div className="container-fluid">
+        <div className="container">
           <h1 className="services-heading text-center py-5 ">
             Explore our services
           </h1>
