@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Pet_Grooming/static/css/main.158ff55b.css",
+    "main.js": "/Pet_Grooming/static/js/main.aea16f07.js",
+    "static/js/453.a2607b59.chunk.js": "/Pet_Grooming/static/js/453.a2607b59.chunk.js",
+    "static/media/Satoshi-Variable.ttf": "/Pet_Grooming/static/media/Satoshi-Variable.536fda9b164542087fc7.ttf",
+    "static/media/Fredoka-Medium.ttf": "/Pet_Grooming/static/media/Fredoka-Medium.6fd73c58ca580300aae5.ttf",
+    "static/media/Fredoka-Light.ttf": "/Pet_Grooming/static/media/Fredoka-Light.f51c28cc1e99d66d05c1.ttf",
+    "index.html": "/Pet_Grooming/index.html",
+    "main.158ff55b.css.map": "/Pet_Grooming/static/css/main.158ff55b.css.map",
+    "main.aea16f07.js.map": "/Pet_Grooming/static/js/main.aea16f07.js.map",
+    "453.a2607b59.chunk.js.map": "/Pet_Grooming/static/js/453.a2607b59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.158ff55b.css",
+    "static/js/main.aea16f07.js"
+  ]
+}
