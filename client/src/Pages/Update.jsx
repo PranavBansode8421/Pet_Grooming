@@ -115,6 +115,7 @@ const Update = () => {
                 className="form-control"
                 id="owner-name"
                 placeholder="Enter Owner Name"
+                readOnly
                 required
               />
             </div>

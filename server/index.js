@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const path = require("path");
+
 
 const allowedOrigins = [
   "http://localhost:3000", //local url
@@ -154,13 +154,7 @@ app.post("/contactus", (req, res) => {
   });
 });
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, "..", "client", "build"))); // Adjust if folder name is different
 
-// Catch-all handler: for any route not handled by your API, send back React index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
-});
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
