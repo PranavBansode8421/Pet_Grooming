@@ -15,6 +15,7 @@ import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import ProtectedRoute from "./Routes/ProtectedRoute";
 import Myappointments from "./Pages/Myappointments";
+import PageNotFound from "./Pages/PageNotFound";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="*" element={<PageNotFound />} />
 
           <Route path="/login" element={<Login />} />
           <Route
