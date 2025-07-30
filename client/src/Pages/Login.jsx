@@ -30,7 +30,7 @@ const Login = () => {
       localStorage.setItem("role", role);
       localStorage.setItem("token", token);
 
-      alert("Login successful!");
+      // alert("Login successful!");
 
       // Redirect based on role
       if (role === "admin") {//

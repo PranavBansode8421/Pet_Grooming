@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../Styles/Navbar.css";
 
 const Navbar = () => {
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [name, setName] = useState("");
   // const [email,setEmail] = useState("");
   const location = useLocation();
+  const navigate= useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -37,7 +38,7 @@ const Navbar = () => {
     setIsLogin(false);
     setRole("");
     alert("You have been logged out.");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
