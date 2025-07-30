@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const path = require("path");
 
 const allowedOrigins = [
   "http://localhost:3000", //local url
@@ -39,7 +40,7 @@ app.get("/appointments", (req, res) => {
 });
 app.get("/appointments/:id", (req, res) => {
   const appointmentId = req.params.id;
-
+  
   const q = "SELECT * FROM appointments WHERE id = ?";
   db.query(q, [appointmentId], (err, data) => {
     if (err) {
@@ -54,7 +55,7 @@ app.get("/appointments/:id", (req, res) => {
 
 app.post("/appointments", (req, res) => {
   const q =
-    "INSERT INTO appointments (`userid`,`ownerName`,`email`,`contact`,`petName`,`petType`,`package`,`amount`,`date`,`time`,`message`,`status`) VALUES (?)";
+  "INSERT INTO appointments (`userid`,`ownerName`,`email`,`contact`,`petName`,`petType`,`package`,`amount`,`date`,`time`,`message`,`status`) VALUES (?)";
   const values = [
     req.body.userid,
     req.body.ownerName,
@@ -69,7 +70,7 @@ app.post("/appointments", (req, res) => {
     req.body.message,
     req.body.status || "Incomplete", // Default status if not provided
   ];
-
+  
   db.query(q, [values], (err, data) => {
     if (err) {
       return res.status(500).json(err);
@@ -93,9 +94,9 @@ app.delete("/appointments/:id", (req, res) => {
 
 app.put("/appointments/:id", (req, res) => {
   const appointmentId = req.params.id;
-
+  
   const q =
-    "UPDATE appointments SET `ownerName`= ?, `email`= ?, `contact`= ?, `petName`= ?, `petType`= ?, `package`= ?, `amount`= ?, `date`= ?, `time`= ?, `message`= ?, `status`= ? WHERE `id` = ?";
+  "UPDATE appointments SET `ownerName`= ?, `email`= ?, `contact`= ?, `petName`= ?, `petType`= ?, `package`= ?, `amount`= ?, `date`= ?, `time`= ?, `message`= ?, `status`= ? WHERE `id` = ?";
   const values = [
     req.body.ownerName,
     req.body.email,
@@ -110,7 +111,7 @@ app.put("/appointments/:id", (req, res) => {
     req.body.status || "Incomplete",
     appointmentId,
   ];
-
+  
   db.query(q, [...values, appointmentId], (err, data) => {
     if (err) {
       return res.json(err);
@@ -136,14 +137,14 @@ app.get("/contactus", (req, res) => {
 //for contactus data store in db
 app.post("/contactus", (req, res) => {
   const q =
-    "INSERT INTO contactus (`name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?)";
+  "INSERT INTO contactus (`name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?)";
   const values = [
     req.body.name,
     req.body.email,
     req.body.subject,
     req.body.message,
   ];
-
+  
   db.query(q, values, (err, data) => {
     if (err) {
       return res.json(err);
@@ -153,6 +154,13 @@ app.post("/contactus", (req, res) => {
   });
 });
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "..", "client", "build"))); // Adjust if folder name is different
+
+// Catch-all handler: for any route not handled by your API, send back React index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "client", "build", "index.html"));
+});
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
