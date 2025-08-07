@@ -20,6 +20,11 @@ const BookingForm = () => {
     status: "",
   });
 
+  const getTodayDate = () => {
+    const today = new Date();
+    return today.toISOString().split("T")[0];
+  };
+
   useEffect(() => {
     const storedName = localStorage.getItem("name");
     const storedEmail = localStorage.getItem("email");
@@ -220,9 +225,10 @@ const BookingForm = () => {
               value={data.date}
               onChange={dataHandler}
               className="form-control"
-              id="date"
+              min={getTodayDate()}
               required
             />
+            
           </div>
 
           <div className="col-md-6 mt-4">
