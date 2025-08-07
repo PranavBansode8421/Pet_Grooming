@@ -44,7 +44,7 @@ app.get("/appointments/:id", (req, res) => {
   const q = "SELECT * FROM appointments WHERE id = ?";
   db.query(q, [appointmentId], (err, data) => {
     if (err) {
-      return res.status(500).json("Database error: " + err);
+      return res.status(500).json("Database error : " + err);
     } else if (data.length === 0) {
       return res.status(404).json("Appointment not found");
     } else {

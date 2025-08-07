@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
-const API_BASE = process.env.REACT_APP_BASE_URL ; // "http://127.0.0.1:3001"
+const API_BASE = process.env.REACT_APP_BASE_URL;
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -20,20 +22,15 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(`${API_BASE}/api/auth/login`, credentials);
-      const { token, role,name,email,id } = res.data; //
-      // console.log(role)//
-      // console.log(res)
-      // Save token and user in localStorage
+      const { token, role, name, email, id } = res.data;
+
       localStorage.setItem("id", id);
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
       localStorage.setItem("role", role);
       localStorage.setItem("token", token);
 
-      // alert("Login successful!");
-
-      // Redirect based on role
-      if (role === "admin") {//
+      if (role === "admin") {
         navigate("/admin");
       } else {
         navigate("/");
@@ -45,17 +42,15 @@ const Login = () => {
   };
 
   return (
-    <div className="container-fluid signup-wrapper pt-5 ">
+    <div className="container-fluid signup-wrapper pt-5">
       <div className="row d-flex align-items-center justify-content-center">
-        <div className="col-md-6 ">
-          <div className=" signup   p-5">
-            <h2 className="mb-4 text-center d-flex flex-column justify-content-center">
-              Login
-            </h2>
+        <div className="col-md-6">
+          <div className="signup p-5">
+            <h2 className="mb-4 text-center">Login</h2>
 
             <form
               onSubmit={handleLogin}
-              className="d-flex flex-column justify-content-center  align-items-center"
+              className="d-flex flex-column justify-content-center align-items-center"
             >
               <div className="col-md-6">
                 <input
@@ -68,9 +63,10 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="col-md-6">
+
+              <div className="col-md-6 position-relative">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   className="form-control my-2"
                   placeholder="Enter password"
@@ -78,7 +74,19 @@ const Login = () => {
                   onChange={handleChange}
                   required
                 />
+                <i
+                  className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"} position-absolute`}
+                  style={{
+                    fontSize:"20px",
+                    top: "50%",
+                    right: "10px",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setShowPassword(!showPassword)}
+                ></i>
               </div>
+
               <div className="text-center d-flex flex-column justify-content-center align-items-center">
                 <button className="btn btn-success mt-2" type="submit">
                   Login
@@ -97,3 +105,4 @@ const Login = () => {
 };
 
 export default Login;
+
